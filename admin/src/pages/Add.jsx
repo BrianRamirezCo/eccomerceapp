@@ -31,7 +31,7 @@ const Add = ({token}) => {
       formData.append('price',price)
       formData.append('category',category)
       formData.append('subCategory',subCategory)
-      formData.append('bestSeller',bestSeller)
+      formData.append('bestseller',bestSeller)
       formData.append('sizes',JSON.stringify(sizes))
 
       image1 && formData.append('image1',image1)
@@ -94,7 +94,7 @@ const Add = ({token}) => {
       </div>
 
       <div className='w-full'>
-        <p className='mb-2'>Product Name</p>
+        <p className='mb-2'>Product Description</p>
         <textarea onChange={(e)=>setDescription(e.target.value)} value={description} className="w-full max-w-[500px] px-3 py-2" type='text' placeholder='Write a Description' required/>
       </div>
 
@@ -145,7 +145,7 @@ const Add = ({token}) => {
           </div>
 
           <div onClick={()=> setSizes(prev =>prev.includes('XXL')? prev.filter(item => item !== 'XXL') : [...prev , 'XXL'])}>
-          <p className={`${sizes.includes('XXL') ? 'bg-pink-100': 'bg-slate-200'} px-3 py-1 cursor-pointer`}>XX</p>
+          <p className={`${sizes.includes('XXL') ? 'bg-pink-100': 'bg-slate-200'} px-3 py-1 cursor-pointer`}>XXL</p>
           </div>
         </div>
       </div>
